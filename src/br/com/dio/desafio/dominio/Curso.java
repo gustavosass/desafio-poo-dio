@@ -9,9 +9,12 @@ public class Curso extends Conteudo{
         return XP_PADRAO * cargaHoraria;
     }
 
-    public Curso() {
+    public Curso(String titulo, String descricao, double preco, Professor professor) {
+        setTitulo(titulo);
+        setDescricao(descricao);
+        setPreco(preco);
+        setProfessor(professor);
     }
-
 
     public int getCargaHoraria() {
         return cargaHoraria;
@@ -26,7 +29,8 @@ public class Curso extends Conteudo{
         return "Curso{" +
                 "titulo='" + getTitulo() + '\'' +
                 ", descricao='" + getDescricao() + '\'' +
-                ", cargaHoraria=" + cargaHoraria +
+                ", cargaHoraria=" + cargaHoraria + '\'' +
+                ", preço=" + String.format("%,.2f",getPreco()) +
                 '}';
     }
 }

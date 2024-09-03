@@ -11,7 +11,11 @@ public class Mentoria extends Conteudo{
         return XP_PADRAO + 20d;
     }
 
-    public Mentoria() {
+    public Mentoria(String titulo, String descricao, double preco, Professor professor) {
+        setTitulo(titulo);
+        setDescricao(descricao);
+        setPreco(preco);
+        setProfessor(professor);
     }
 
     public LocalDate getData() {
@@ -27,7 +31,8 @@ public class Mentoria extends Conteudo{
         return "Mentoria{" +
                 "titulo='" + getTitulo() + '\'' +
                 ", descricao='" + getDescricao() + '\'' +
-                ", data=" + data +
+                ", data=" + data + '\'' +
+                ", preço=" + String.format("%,.2f",getPreco()) +
                 '}';
     }
 }
